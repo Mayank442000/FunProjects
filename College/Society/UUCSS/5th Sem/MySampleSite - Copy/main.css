@@ -1,0 +1,340 @@
+:root {
+    --rBgCol: #222;
+    counter-reset: num;
+}
+
+#bdy {
+    background-color: var(--rBgCol); /*rgb(30, 60, 60)*/
+    user-select: none;
+    color: #eee;
+    max-width: 100vw;
+}
+
+#stNm {
+    font-size: 7.5vmin;
+    font-family: Helvetica;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2vmin;
+    margin-top: 7.5vmin;
+    width: 100%;
+    /*background-color: chocolate;*/
+    padding: 0;
+}
+
+.mnItm,
+.drpDwnC > * {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0.5% 0 0.5%;
+    padding: 0.7vmin 0 0.7vmin 0;
+    cursor: pointer;
+    font-size: 3.5vmin;
+    /*background-color: rebeccapurple;*/
+    background-color: goldenrod;
+}
+
+.mnItm:hover,
+.drpDwnC > *:hover {
+    text-decoration: underline;
+    background-color: gold;
+}
+
+.mnItm:hover .drpDwnC {
+    display: block;
+}
+
+.drpDwnC {
+    text-align: justify;
+    display: none;
+    position: absolute;
+    /*width: 15.23%;*/
+    min-width: calc(100vw / 6 - 2.5vmin);
+    margin: 0;
+    background-color: #222;
+    border: 1px solid #000;
+    z-index: 1;
+    margin: 0.9vmin -1px 0 0;
+}
+
+.drpDwnC > * {
+    width: 92%;
+    display: block;
+    margin: 1vmin;
+}
+
+#srchD {
+    padding: 0.4vmin 0 0.4vmin 0;
+}
+
+#srch {
+    border: none;
+    height: 4vmin;
+    width: 90%;
+    font-size: 1em;
+    background-color: azure;
+    color: darkslategrey;
+}
+
+#Sldr {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vmin;
+    /*background-color: wheat;*/
+    height: 50vmin;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 1vmin 0 1vmin 0;
+    border: 1px solid gray;
+}
+
+#Sldr:hover {
+    box-shadow: 1px 1px grey, -1px -1px grey;
+}
+
+.sItm {
+    display: inline-block;
+    /*background-color: cornflowerblue;*/
+    height: 100%;
+    min-width: max(50%, calc(50vmin * 16 / 9 + 20px));
+    scroll-snap-align: start;
+    transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+}
+
+.sVid {
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+#mnBd {
+    margin: 7.25vmin 0 14.5vmin 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#aSgst {
+    display: grid;
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0 5vmin 10vmin 5vmin;
+}
+
+#anmArr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(max(min(100px, 85vw), 11vw), 1fr));
+    grid-column-gap: 3vmin;
+    grid-row-gap: 3vmin;
+}
+
+.aCrd {
+    flex-direction: column-reverse;
+    justify-content: start;
+    counter-increment: num;
+    font-size: 5vmin;
+    aspect-ratio: 2/3;
+    border: 1px solid #fff;
+    background: gray no-repeat;
+    background-size: cover;
+}
+
+.aCrd:hover {
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 10px #fff;
+    cursor: pointer;
+}
+
+/*.aCrd::before {
+    content: counter(num);
+}*/
+
+.aNm {
+    font-size: 3.5vmin;
+    height: 4.1vmin;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #222a;
+}
+
+.aCrd:hover .aNm {
+    height: fit-content;
+}
+
+.aNm:hover {
+    background-color: #222d;
+    overflow: scroll;
+}
+
+#lftLn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    max-width: 35%;
+    /*border: 1px solid navajowhite;*/
+}
+
+#Musc,
+#gnr {
+    width: 29.75vw !important;
+    /*width: 85%;*/
+    height: fit-content;
+    border: 1px solid navajowhite;
+    padding-bottom: 8vmin;
+}
+
+#sgMsc,
+#gnr h2 {
+    margin-left: 3vmin;
+}
+
+.mscAnm {
+    margin: 2vmin;
+    background-color: silver;
+}
+
+.mscAnm:hover,
+.mscTrk {
+    background-color: goldenrod;
+}
+
+.aAd {
+    height: 3vmin;
+    width: 100%;
+}
+
+.mscAnm:not(:hover) .mscTrk {
+    display: none;
+}
+
+.mscTrk {
+    position: absolute;
+    width: calc(29.75vw - 4vmin);
+}
+
+.mscNm:hover,
+.msc:hover,
+.cat div:hover,
+#fotC > div:hover {
+    text-decoration: underline;
+}
+
+.msc {
+    font-size: 3vmin;
+    text-decoration: none;
+}
+
+.mscNm {
+    font-size: 4vmin;
+}
+
+#gnr {
+    padding-top: 0.5vmin;
+    margin-top: 10vmin;
+}
+
+#gnrL {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cat {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5vmin;
+    flex-grow: 2;
+    width: 20%;
+    margin: 1vmin;
+    /*background-color: maroon;*/
+}
+
+.cat div {
+    width: fit-content;
+    padding: 1vmin;
+    /*background-color: blueviolet;*/
+    cursor: pointer;
+    color: goldenrod;
+    border: 1px solid #0000;
+}
+
+.cat div:hover {
+    color: white;
+    border: 1px solid #fff;
+}
+
+h1 {
+    font-size: 5vmin;
+}
+
+h2 {
+    font-size: 4vmin;
+}
+
+#Foot {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+}
+
+#fotC {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5vmin;
+    font-size: 3vmin;
+    width: 50%;
+}
+
+#fotC > div {
+    width: 20vmin;
+    text-align: center;
+    background-color: #2226;
+    cursor: pointer;
+}
+
+#fotC > div:hover {
+    background-color: #222;
+}
+
+#fotNm {
+    margin: 3vmin;
+    font-size: 4vmin;
+}
+
+#Foot:not(:hover) .ntImp {
+    display: none;
+}
+
+@media only screen and (max-device-width: 600px) {
+    #mnBd {
+        flex-direction: column;
+        max-width: 87vw;
+    }
+    #lftLn {
+        flex-direction: row;
+        align-items: flex-start;
+        min-width: 97.3vw;
+        margin-top: 10vmin;
+        background-color: purple;
+        max-width: none;
+    }
+    #Musc,
+    #gnr {
+        width: 45vw !important;
+        margin-top: 0;
+    }
+    .mscTrk {
+        position: absolute;
+        width: calc(45vw - 4vmin - 0.8vw);
+    }
+    #gnr {
+        margin-left: 8vw;
+    }
+    .sItm {
+        min-width: calc(50vmin * 16 / 9+5vmin);
+    }
+}

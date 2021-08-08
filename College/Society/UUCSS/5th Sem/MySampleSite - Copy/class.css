@@ -1,0 +1,25 @@
+.fh {
+    height: 100% !important;
+}
+
+.fw {
+    width: 100% !important;
+}
+
+.fitBGimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.MidCent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.b {
+    font-weight: bold;
+}
