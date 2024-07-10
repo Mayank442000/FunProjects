@@ -1,4 +1,4 @@
-#FunProjects
+# Project List
 
 Here's a list of some projects I've worked on!
 
